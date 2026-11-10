@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "not-yet"
+version = "0.1.0"
+description = "Ready, waiting, forbidden: ontology-guided governance for tool-using LLM agents, with an offline prompt-injection harness"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "tatra-labs"}]
+keywords = ["agents", "prompt-injection", "security", "ontology", "tool-use", "llm", "guardrails"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+figures = ["matplotlib>=3.6"]
+
+[project.scripts]
+not-yet = "notyet.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tatra-labs/not-yet"
+
+[tool.setuptools]
+packages = ["notyet", "notyet.suites"]
